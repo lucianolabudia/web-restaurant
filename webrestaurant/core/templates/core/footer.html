@@ -40,10 +40,18 @@
         <div class="col-lg-3 col-md-6 footer-links">
           <h4>Follow Us</h4>
           <div class="social-links d-flex">
-            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            {% if LINK_TWITTER %}
+              <a href="{{ LINK_TWITTER }}" class="twitter"><i class="bi bi-twitter"></i></a>
+            {% endif %}
+            {% if LINK_FACEBOOK %}
+              <a href="{{ LINK_FACEBOOK }}" class="facebook"><i class="bi bi-facebook"></i></a>
+            {% endif %}
+            {% if LINK_INSTAGRAM %}
+              <a href="{{ LINK_INSTAGRAM }}" class="instagram"><i class="bi bi-instagram"></i></a>
+            {% endif %}
+            {% if LINK_LINKEDIN %}
+              <a href="{{ LINK_LINKEDIN }}" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            {% endif %}                  
           </div>
         </div>
 
