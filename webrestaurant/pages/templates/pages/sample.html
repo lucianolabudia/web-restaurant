@@ -1,0 +1,54 @@
+{% extends 'core/base.html' %}
+
+{% block title %}More Info.{% endblock title %}
+
+{% load static %}
+
+{% block content %}
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="section-header">
+            <h2>Info.</h2>
+            <p>Information <span>About Us</span></p>
+          </div>
+  
+          <div class="slides-1 swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+  
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="row gy-4 justify-content-center">
+                    <div class="col-lg-6">
+                      <div class="testimonial-content">
+                        <h3>{{page.title}}</h3>
+                        <h4>Ceo &amp; Founder</h4>
+                        <p>
+                          {{page.content|safe}}
+                          {% if user.id_authenticated %}
+                            
+                            <a href="{% url 'admin:pages_page_change' page.id %}" class="more-btn">Edit <i class="bx bx-chevron-right"></i></a>
+                            
+                          {% endif %}
+                        </p>                        
+                        
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div><!-- End testimonial item -->
+  
+
+  
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+  
+        </div>
+      </section><!-- End Testimonials Section -->
+{% endblock content %}
